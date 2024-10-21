@@ -1,5 +1,5 @@
 import { Scene } from 'phaser';
-import { getTranslations } from '../services/translations';
+import { getPhrase, getTranslations } from '../services/translations';
 
 const ES_AR = 'es-AR';
 const EN_US = 'en-US';
@@ -25,7 +25,7 @@ export class LangSelector extends Scene
         const width = this.scale.width;
         const height = this.scale.height;
 
-        this.add.text(512, 460, 'Selector de idiomas', {
+        this.add.text(512, 460, getPhrase('Selector de idiomas'), {
             fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
             stroke: '#000000', strokeThickness: 8,
             align: 'center'
